@@ -35,10 +35,12 @@ function iniciar() {
 }
 
 function pausar() {
-    botaoParaContinuar();
-    clearInterval(intervalo);
-    intervalo = null;
-
+    if(intervalo) {
+        botaoParaContinuar();
+        clearInterval(intervalo);
+        intervalo = null;
+    }
+    return 0;
 }
 
 function reiniciar() {
